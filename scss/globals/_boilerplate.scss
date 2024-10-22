@@ -50,3 +50,31 @@ h6 {
 body {
   font-family: $font-poppins;
 }
+
+.hero__header {
+  text-align: center;
+  &--thin {
+    font-weight: 200;
+  }
+  &--bold {
+    font-weight: 600;
+  }
+  &__description {
+    font-size: 0.93rem;
+    color: var(--neutral-grayish-blue);
+  }
+}
+.hero__body {
+  .card {
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.12), 0 1px 6px rgba(0, 0, 0, 0.24);
+
+    &__header {
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    &__description {
+      font-size: 0.8rem;
+      color: var(--neutral-grayish-blue);
+    }
+  }
+}

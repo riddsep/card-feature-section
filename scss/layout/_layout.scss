@@ -1,0 +1,50 @@
+.container {
+  width: 100%;
+}
+.hero {
+  margin-block: 5rem;
+  width: 82%;
+  margin-inline: auto;
+
+  &__header {
+    margin-bottom: 5rem;
+    &--bold {
+      margin-bottom: 0.8em;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    .card {
+      padding: 1.5rem;
+      border-radius: 4px;
+
+      &--cyan {
+        border-top: 4px solid var(--primary-cyan);
+      }
+
+      &--red {
+        border-top: 4px solid var(--primary-red);
+      }
+
+      &--orange {
+        border-top: 4px solid var(--primary-orange);
+      }
+
+      &--blue {
+        border-top: 4px solid var(--primary-blue);
+      }
+
+      &__description {
+        margin-bottom: 2rem;
+      }
+      &__icon__image {
+        margin-inline-start: auto;
+        width: 60px;
+      }
+    }
+  }
+}
