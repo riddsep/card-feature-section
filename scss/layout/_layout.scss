@@ -1,13 +1,24 @@
 .container {
   width: 100%;
 }
+
 .hero {
   margin-block: 5rem;
   width: 82%;
   margin-inline: auto;
 
+  @media (min-width: 64em) {
+    width: 100%;
+  }
+
   &__header {
     margin-bottom: 5rem;
+
+    @media (min-width: 64em) {
+      width: 35%;
+      margin-inline: auto;
+    }
+
     &--bold {
       margin-bottom: 0.8em;
     }
@@ -17,6 +28,28 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+
+    @media (min-width: 64em) {
+      width: 70%;
+      margin-inline: auto;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
+
+      :first-child {
+        grid-column: 1;
+        grid-row: 2/3;
+      }
+      :last-child {
+        grid-column: 3;
+        grid-row: 2/3;
+      }
+      :nth-child(2) {
+        grid-column: 2;
+      }
+      :nth-child(3) {
+        grid-row: 2;
+      }
+    }
 
     .card {
       padding: 1.5rem;
